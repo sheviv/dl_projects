@@ -4,7 +4,7 @@ import torch
 import argparse
 import time
 import detect_utils
-from PIL import Image
+
 # construct the argument parser
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--input', help='path to input video')
