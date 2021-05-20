@@ -19,6 +19,7 @@ LEARNING_RATE = 0.001
 transform = transforms.Compose(
     [transforms.ToTensor(),
      transforms.Normalize((0.5,), (0.5,))])
+# для RGB Нормализовать ((0,5, 0,5, 0,5), (0,5, 0,5, 0,5))
 
 # Скачать данные
 trainset = torchvision.datasets.FashionMNIST(root='./data', train=True,

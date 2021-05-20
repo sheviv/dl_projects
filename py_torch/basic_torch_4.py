@@ -41,7 +41,7 @@ vgg16.to(device)  # загружает модель на устройство(п
 # vgg16 - 1000 классов, а нужно 10
 # замораживание весов Conv2d() заставит модель использовать все предварительно обученные веса
 # изменить количество классов
-vgg16.classifier[6].out_features = 10
+vgg16.classifier[6].out_features = 10  # классификатор VGG-16 из 6-слойного массива
 # замораживание весов Conv2d()
 for param in vgg16.features.parameters():
     param.requires_grad = False

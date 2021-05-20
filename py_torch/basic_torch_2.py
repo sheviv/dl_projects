@@ -96,7 +96,7 @@ optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 
 
 # Обучение нейронной сети на данных
-# 15000 пакетов по 4 изображения
+# 15000 батчей по 4 изображения
 def train(net):
     start = time.time()  # засечь время обучения модели
     for epoch in range(10):  # 10 эпох
@@ -112,20 +112,20 @@ def train(net):
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
-            if i % 5000 == 4999:  # каждые 5000 мини-партий
+            if i % 5000 == 4999:  # каждые 5000 мини-батчей
                 print('[Epoch %d, %5d Mini Batches] loss: %.3f' %
                       (epoch + 1, i + 1, running_loss / 5000))
                 running_loss = 0.0
     end = time.time()
     print('Done Training')
     print('%0.2f minutes' % ((end - start) / 60))
-# train(net)
+# train(net)  # обучение модели
 
 
 # Тестирование нашей сети на тестовом наборе
 correct = 0
 total = 0
-with torch.no_grad():
+with torch.no_grad():  # сделает все операции в блоке без градиентов
     for data in testloader:
         inputs, labels = data[0].to(device, non_blocking=True), data[1].to(device, non_blocking=True)
         outputs = net(inputs)
