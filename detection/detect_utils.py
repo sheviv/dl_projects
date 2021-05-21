@@ -30,6 +30,18 @@ def predict(image, model, device, detection_threshold):
     # get boxes above the threshold score
     boxes = pred_bboxes[pred_scores >= detection_threshold].astype(np.int32)
     return boxes, pred_classes, outputs[0]['labels']
+    # # for once class
+    #         try:
+    #         pred_classes = [coco_names[i] for i in outputs[0]['labels'].cpu().numpy()]
+    #         # get score for all the predicted objects
+    #         pred_scores = outputs[0]['scores'].detach().cpu().numpy()
+    #         # get all the predicted bounding boxes
+    #         pred_bboxes = outputs[0]['boxes'].detach().cpu().numpy()
+    #         # get boxes above the threshold score
+    #         boxes = pred_bboxes[pred_scores >= detection_threshold].astype(np.int32)
+    #         return boxes, pred_classes, outputs[0]['labels']
+    #     except IndexError:
+    #         pass
 
 
 def draw_boxes(boxes, classes, labels, image):

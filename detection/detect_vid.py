@@ -47,6 +47,13 @@ with torch.no_grad():
                 # get predictions for the current frame
                 boxes, classes, labels = detect_utils.predict(frame, model, device, 0.8)
 
+                # for once class
+                # try:
+                #     get predictions for the current frame
+                    # boxes, classes, labels = detect_utils.predict(frame, model, device, 0.8)
+                # except TypeError:
+                #     pass
+
             # draw boxes and show current frame on screen
             image = detect_utils.draw_boxes(boxes, classes, labels, frame)
             # get the end time
