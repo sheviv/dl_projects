@@ -129,4 +129,5 @@ pred_dict = {}
 for i in images_path:
     pred_dict[i[i.rfind('/')+1:]] = prediction(i, transformer)
 
+# словарь с предсказаниями и изображениями
 print(pred_dict)

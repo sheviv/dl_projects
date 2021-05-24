@@ -6,6 +6,13 @@ __pycache__/
 # pytorch_yolov3
 /pytorch-yolov3
 
+# scene_detection
+# seg_pred
+/scene_detection/seg_pred
+/scene_detection/seg_test
+/scene_detection/seg_train
+/scene_detection/best_checkpoint.model
+
 # C extensions
 *.so
 
