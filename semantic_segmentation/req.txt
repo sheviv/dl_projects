@@ -4,3 +4,6 @@ categories - ['__background__', 'aeroplane', 'bicycle', 'bird', 'boat', 'bottle'
  'car', 'cat', 'chair', 'cow', 'diningtable', 'dog', 'horse', 'motorbike',
  'person', 'pottedplant', 'sheep', 'sofa', 'train', 'tvmonitor']
 
+launch
+python3 segment_vid.py --input input/video1.mp4
+python3 segment_vid.py --input /home/sheviv/Download/city.mp4

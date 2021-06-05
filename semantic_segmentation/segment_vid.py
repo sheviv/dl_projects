@@ -42,7 +42,10 @@ while (cap.isOpened()):
         with torch.no_grad():
             # получить прогнозы для текущего кадра
             outputs = segmentation_utils.get_segment_labels(frame, model, device)
+            # print(f"outputs: {outputs['out']}")
         # отрисовка поля и показ текущего кадра
+        # print(f"segment_vid outputs['out']: {outputs['out']}")
+        # print(f"segment_vid outputs['out']: {outputs}")
         segmented_image = segmentation_utils.draw_segmentation_map(outputs['out'])
         final_image = segmentation_utils.image_overlay(frame, segmented_image)
         # время окончания
@@ -68,5 +71,5 @@ while (cap.isOpened()):
 cap.release()
 cv2.destroyAllWindows()
 # рассчитать и вывести средний FPS
-avg_fps = total_fps / frame_count
-print(f"Average FPS: {avg_fps:.3f}")
+# avg_fps = total_fps / frame_count
+# print(f"Average FPS: {avg_fps:.3f}")

@@ -6,12 +6,23 @@ __pycache__/
 # pytorch_yolov3
 /pytorch-yolov3
 
+# py_torch directory
+/py_torch/experiments
+/py_torch/my_instance_segmentation
+/py_torch/my_semantic_segmentation
+/py_torch/my_tracking
+/py_torch/my_detection
+
 # scene_detection
 # seg_pred
+/scene_detection
 /scene_detection/seg_pred
 /scene_detection/seg_test
 /scene_detection/seg_train
 /scene_detection/best_checkpoint.model
+
+# MASK_RCNN
+/mask_rcnn_test
 
 # C extensions
 *.so

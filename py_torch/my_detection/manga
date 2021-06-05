@@ -1,0 +1,21 @@
+https://debuggercafe.com/faster-rcnn-object-detection-with-pytorch/
+"
+image
+"
+python detect.py --input input/horses.jpg
+python detect.py --input input/people.jpg
+python detect.py --input input/people.jpg --min-size 1024
+python detect.py --input input/street.jpg
+python detect.py --input input/street.jpg --min-size 1024
+
+"
+video
+"
+python detect_vid.py --input input/video2.mp4
+python detect_vid.py --input input/video2.mp4 --min-size 300
+
+"
+webcam
+"
+python3 detect_vid.py --id 0
+

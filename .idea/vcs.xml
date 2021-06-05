@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mask_rcnn_test/Mask_RCNN" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/py_torch/experiments/yolov4_deepSort" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pytorch-yolov3" vcs="Git" />
   </component>
 </project>
